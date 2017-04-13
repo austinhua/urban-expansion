@@ -18,7 +18,6 @@ bw = activecontour(I,mask,300);
 figure, imshow(bw), title('Segmented Image')
 %}
 %%
-
 [~, threshold] = edge(I, 'sobel');
 fudgeFactor = .5;
 BWs = edge(I,'sobel', threshold * fudgeFactor);

@@ -8,19 +8,19 @@ figure(1);clf;
 imshow(original_image);
 
 image = imsharpen(original_image);
-%image = make_green(image, 1);
-%image = make_green_pixel(image);
+% image = make_green(image, 1);
+% image = make_green_pixel(image);
 figure(40); clf;
 imshow(image);
 
-%modeimage = modereplacement(image, 5);
-%modeimage = quantize(image, 100);
-%figure(40); clf;
-%imshow(modeimage);
-
-%[image_no_dither, map] = rgb2ind(image, 32, 'nodither');
-%figure(3); clf;
-%imshow(image_no_dither, map);
+% modeimage = modereplacement(image, 5);
+% modeimage = quantize(image, 100);
+% figure(40); clf;
+% imshow(modeimage);
+% 
+% [image_no_dither, map] = rgb2ind(image, 32, 'nodither');
+% figure(3); clf;
+% imshow(image_no_dither, map);
 
 red = image(:,:,1); % red channel
 green = image(:,:,2); % green channel
@@ -159,6 +159,8 @@ end
 
 % imshow(grass_dirty);
 % CHECK GREEN/BROWN?
+
+fprintf('test');
 
 grass_dirty(grass_dirty > 0) = 255;
 % bw_grass = imbinarize(grass_dirty);
