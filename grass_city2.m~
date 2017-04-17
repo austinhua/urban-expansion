@@ -1,6 +1,6 @@
 close all;
 
-file = '2000.jpg';
+file = 'boundary.jpg';
 %file = 'lasvegas.jpg';
 
 original_image = imread(file);
@@ -22,9 +22,9 @@ BW = imfill(BW, 'holes');
 figure(3); clf;
 imshow(BW);
 
-%extracted_image = extract_pink(image);
-%figure(4); clf;
-%imshow(extracted_image);
+extracted_image = extract_pink(image);
+figure(4); clf;
+imshow(extracted_image);
 
 %modeimage = modereplacement(image, 5);
 %modeimage = quantize(image, 100);
